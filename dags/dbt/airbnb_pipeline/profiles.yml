@@ -1,0 +1,13 @@
+# airbnb_pipeline:  # Ensure this matches the profile name you are using in dbt commands
+#   target: dev
+#   outputs:
+#     dev:
+#       type: snowflake
+#       account: "<your-account-name>"
+#       user: "<your-username>"
+#       password: "<password>"
+#       role: "<your-role>"
+#       database: "<database-name>"
+#       warehouse: "<warehouse-name>"
+#       schema: <your-schema>
+#       threads: <number-of-threads>

@@ -1,0 +1,25 @@
+version: 2
+sources: 
+  - name: airbnb
+    database: demo
+    schema: demo_schema
+    tables:
+      - name: listings
+        columns:
+          - name: id
+            tests: 
+              - unique
+              - not_null
+
+      - name: reviews
+        columns:
+          - name: id
+            tests:
+              - unique
+              - not_null
+          - name: listing_id
+            tests:
+              - relationships: 
+                  to: source('airbnb','listings')
+                  field: id
+
